@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "958618966188",
+    "project_id": "grpwork-fea56",
+    "storage_bucket": "grpwork-fea56.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:958618966188:android:bdf7c08dc5199ab1e7a709",
+        "android_client_info": {
+          "package_name": "com.example.grpwork"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "958618966188-drgtup8bsr5ttk27r1co94cpkjgf6tu0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzT4HTXfT68HgovajFvBZGQa6t_A3U5L8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "958618966188-drgtup8bsr5ttk27r1co94cpkjgf6tu0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
