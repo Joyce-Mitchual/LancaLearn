@@ -28,6 +28,7 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
+        getSupportActionBar().hide();
         //Hooks to find all xml element in activity_sign_up.xml
 
         regName=findViewById(R.id.reg_name);
@@ -39,7 +40,17 @@ public class SignUp extends AppCompatActivity {
         regToLoginBtn=findViewById(R.id.reg_login_btn);
 
 
+      Button callSignUp=findViewById(R.id.reg_login_btn);
+        callSignUp.setOnClickListener(new View.OnClickListener() {
 
+            @Override
+            public void onClick(View view) {
+
+                Intent intent=new Intent(SignUp.this,Dashboard.class);
+                startActivity(intent);
+
+            }
+        });
     }//Onclick Method end
 
 
@@ -188,7 +199,7 @@ public class SignUp extends AppCompatActivity {
 //
 //        reference.child(username).setValue(helperClass);
 
-        Intent intent  = new Intent(this, CoursesHome.class);
+        Intent intent  = new Intent(this, CoursesHomeActivity.class);
         startActivity(intent);
 
     }

@@ -2,18 +2,17 @@ package com.example.grpwork;
 
 public class UserHelperClass {
 
-    String name, username,email, phoneNo,password;
+    String name, username,email, course,password;
 
     public UserHelperClass() {
 
-
     }
 
-    public UserHelperClass(String name, String username, String email, String phoneNo, String password) {
+    public UserHelperClass(String name, String username, String email, String course, String password) {
         this.name = name;
         this.username = username;
         this.email = email;
-        this.phoneNo = phoneNo;
+        this.course = course;
         this.password = password;
     }
 
@@ -42,12 +41,12 @@ public class UserHelperClass {
         this.email = email;
     }
 
-    public String getPhoneNo() {
-        return phoneNo;
+    public String getCourse() {
+        return course;
     }
 
-    public void setPhoneNo(String phoneNo) {
-        this.phoneNo = phoneNo;
+    public void setCourse(String course) {
+        this.course = course;
     }
 
     public String getPassword() {

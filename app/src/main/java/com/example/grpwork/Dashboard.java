@@ -31,21 +31,22 @@ public class Dashboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_dashboard);
 
         //Hooks
-//        callSignUp=findViewById(R.id.signup_screen);
-//         callSignUp.setOnClickListener(new View.OnClickListener() {
-//
-//                 @Override
-//            public void onClick(View view) {
-//
-//                Intent intent=new Intent(Dashboard.this,SignUp.class);
-//                startActivity(intent);
-//
-//
-//            }
-//        });
+        callSignUp=findViewById(R.id.signup_screen);
+         callSignUp.setOnClickListener(new View.OnClickListener() {
+
+                 @Override
+            public void onClick(View view) {
+
+                Intent intent=new Intent(Dashboard.this,SignUp.class);
+                startActivity(intent);
+
+
+            }
+        });
 
 
 
@@ -98,7 +99,7 @@ public class Dashboard extends AppCompatActivity {
 //            isUser();
 //        }
 
-        Intent intent  = new Intent(Dashboard.this, CoursesHome.class);
+        Intent intent  = new Intent(Dashboard.this, CoursesHomeActivity.class);
         startActivity(intent);
 
     }

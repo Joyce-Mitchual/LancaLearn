@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+        getSupportActionBar().hide();
 
         //Animation
         topAmin= AnimationUtils.loadAnimation(this,R.anim.top_animation);

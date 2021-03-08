@@ -9,15 +9,22 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.Priority;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.grpwork.R;
+import com.example.grpwork.models.Module;
+
+import java.util.ArrayList;
 
 
 public class Recyclerviewadapter extends RecyclerView.Adapter<Recyclerviewadapter.ViewHolder>{
 
-    String[] values;
+    ArrayList<Module> values;
     public  Context context1;
 
-    public Recyclerviewadapter(Context context2, String[] values2){
+    public Recyclerviewadapter(Context context2, ArrayList<Module> values2){
 
         values = values2;
 
@@ -35,6 +42,7 @@ public class Recyclerviewadapter extends RecyclerView.Adapter<Recyclerviewadapte
 
             textView = (TextView) v.findViewById(R.id.textview1);
             imageView  = (ImageView) v.findViewById(R.id.imageview);
+            
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
 
 //            Glide.with(context1)
@@ -56,17 +64,18 @@ public class Recyclerviewadapter extends RecyclerView.Adapter<Recyclerviewadapte
     @Override
     public void onBindViewHolder(ViewHolder Vholder, int position){
 
-        Vholder.textView.setText(values[position]);
+        Module module = values.get(position);
+        Vholder.textView.setText(module.getName());
 
-//        Vholder.textView.setBackgroundColor(Color.CYAN);
-
-//        Vholder.textView.setTextColor(Color.BLUE);
+        Glide.with(context1)
+                .load(module.getImage())
+                .into(Vholder.imageView);
 
     }
 
     @Override
     public int getItemCount(){
 
-        return values.length;
+        return values.size();
     }
 }
