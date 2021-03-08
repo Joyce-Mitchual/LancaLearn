@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     //Variables
     Animation topAmin, bottomAmin;
     ImageView image;
-    TextView logo, groupname;
+    TextView logo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +36,11 @@ public class MainActivity extends AppCompatActivity {
         //hooks
         image= findViewById(R.id.imageView);
         logo= findViewById(R.id.textView);
-        groupname= findViewById(R.id.textView2);
+//        groupname= findViewById(R.id.textView2);
 
         image.setAnimation(topAmin);
         logo.setAnimation(bottomAmin);
-        groupname.setAnimation(bottomAmin);
+//        groupname.setAnimation(bottomAmin);
 
         new Handler().postDelayed(new Runnable() {
             @Override

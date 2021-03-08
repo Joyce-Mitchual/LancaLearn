@@ -31,10 +31,21 @@
                 app:popupTheme="@style/Theme.GRPwork.PopupOverlay" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
     </com.google.android.material.appbar.AppBarLayout>
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        app:layout_anchor="@+id/include"
+        app:layout_anchorGravity="top|center" />
 
-    <include layout="@layout/content_scrolling"    />
+    <include
+        android:id="@+id/include"
+        layout="@layout/content_scrolling" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
