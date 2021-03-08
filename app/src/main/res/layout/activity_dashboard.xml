@@ -103,7 +103,9 @@
         android:text="New User? Sign Up Here"
         android:textColor="@color/black"
         android:background="#0000"
-        android:transitionName="login_signup_tran"/>
+        android:transitionName="login_signup_tran"
+        android:onClick="loginUser"
+        />
 
 
 

@@ -33,24 +33,19 @@ public class Dashboard extends AppCompatActivity {
 
         setContentView(R.layout.activity_dashboard);
 
-//Hooks
-        callSignUp=findViewById(R.id.signup_screen);
-
-
-
-
-
-             callSignUp.setOnClickListener(new View.OnClickListener() {
-
-                 @Override
-            public void onClick(View view) {
-
-                Intent intent=new Intent(Dashboard.this,SignUp.class);
-                startActivity(intent);
-
-
-            }
-        });
+        //Hooks
+//        callSignUp=findViewById(R.id.signup_screen);
+//         callSignUp.setOnClickListener(new View.OnClickListener() {
+//
+//                 @Override
+//            public void onClick(View view) {
+//
+//                Intent intent=new Intent(Dashboard.this,SignUp.class);
+//                startActivity(intent);
+//
+//
+//            }
+//        });
 
 
 
@@ -95,13 +90,17 @@ public class Dashboard extends AppCompatActivity {
 
 
     public void loginUser(View view) {
-        if(!validatePassowrd()| !validateUsername()){
-            return;
-        }
+//        if(!validatePassowrd()| !validateUsername()){
+//            return;
+//        }
+//
+//        else {
+//            isUser();
+//        }
 
-        else {
-            isUser();
-        }
+        Intent intent  = new Intent(Dashboard.this, CoursesHome.class);
+        startActivity(intent);
+
     }
 
 

@@ -2,6 +2,7 @@ package com.example.grpwork;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -172,20 +173,23 @@ public class SignUp extends AppCompatActivity {
 
 
 
-        rootNode= FirebaseDatabase.getInstance();
-        reference=rootNode.getReference("users");
+//        rootNode= FirebaseDatabase.getInstance();
+//        reference=rootNode.getReference("users");
+//
+//        //get all the values
+//        String name=regName.getEditText().getText().toString();
+//        String username=regUsername.getEditText().getText().toString();
+//        String email=regEmail.getEditText().getText().toString();
+//        String phoneNo=regPhoneNo.getEditText().getText().toString();
+//        String password=regPassword.getEditText().getText().toString();
+//
+//
+//        UserHelperClass helperClass=new UserHelperClass(name,username,email,phoneNo,password);
+//
+//        reference.child(username).setValue(helperClass);
 
-        //get all the values
-        String name=regName.getEditText().getText().toString();
-        String username=regUsername.getEditText().getText().toString();
-        String email=regEmail.getEditText().getText().toString();
-        String phoneNo=regPhoneNo.getEditText().getText().toString();
-        String password=regPassword.getEditText().getText().toString();
-
-
-        UserHelperClass helperClass=new UserHelperClass(name,username,email,phoneNo,password);
-
-        reference.child(username).setValue(helperClass);
+        Intent intent  = new Intent(this, CoursesHome.class);
+        startActivity(intent);
 
     }
 
